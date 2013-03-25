@@ -13,15 +13,18 @@ class Triangle:
 		self.n = n
 		self.a = a
 		ans = 0
-		for i in xrange(0,n):
-			for j in xrange(i+1,n):
-				for k in xrange(j+1,n):
+		for i in xrange(0,n+1):
+			for j in xrange(i+1,n+1):
+				for k in xrange(j+1,n+1):
 					leng = self.a[i] + self.a[j] + self.a[k]
+					print a[i],a[j],a[k]
 					ma = max(self.a[i], max(self.a[j], self.a[k])) 
+					print ma
 					rest = leng-ma
-
+					print rest
 					if ma>rest:
 						ans = max(ans, leng)
+						return ans
 		
 if __name__ == '__main__':
 	test = Triangle(5,[2,3,4,5,10])
