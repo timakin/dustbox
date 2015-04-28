@@ -1,5 +1,3 @@
-# Compare two ways of Search
-
 import time
 import random
 
